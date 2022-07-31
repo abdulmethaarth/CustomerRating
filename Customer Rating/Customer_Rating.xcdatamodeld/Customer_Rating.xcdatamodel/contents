@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G417" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Customer" representedClassName="Customer" syncable="YES" codeGenerationType="class">
+        <attribute name="flag" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <relationship name="questionAnswers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="QuestionAnswer" inverseName="customer" inverseEntity="QuestionAnswer"/>
+    </entity>
+    <entity name="QuestionAnswer" representedClassName="QuestionAnswer" syncable="YES" codeGenerationType="class">
+        <attribute name="answer" optional="YES" attributeType="String"/>
+        <attribute name="question" optional="YES" attributeType="String"/>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="questionAnswers" inverseEntity="Customer"/>
+    </entity>
+    <elements>
+        <element name="Customer" positionX="-419.22265625" positionY="-122.52734375" width="128" height="88"/>
+        <element name="QuestionAnswer" positionX="-54" positionY="0" width="128" height="88"/>
+    </elements>
+</model>
